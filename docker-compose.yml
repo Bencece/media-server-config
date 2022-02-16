@@ -1,0 +1,15 @@
+version: "3.5"
+services:
+    jellyfin:
+        image: jellyfin/jellyfin
+        container_name: jellyfin
+        user: uid:gid
+        network_mode: "host"
+        ports:
+            - 7359:7359/udp
+            - 1900:1900/udp
+            - 8096:8096
+        volumes:
+            - /home/${USER}/jellyfin/config:/config
+            - /home/${USER}/jellyfin/cache:/cache
+        restart: "unless-stopped"

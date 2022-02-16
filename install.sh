@@ -1,6 +1,6 @@
 #! /bin/bash
 
-echo "Installing Docker on your system..."
+echo "$(tput setaf 2)Installing Docker on your system...$(tput sgr 0)"
 
 sudo apt-get update
 
@@ -14,4 +14,4 @@ sudo apt-get update
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 
-echo "Installation is complete, please run the config.sh file!"
+echo "(tput setaf 2)Installation is complete, please run the config.sh file!$(tput sgr 0)"
