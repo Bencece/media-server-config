@@ -14,4 +14,10 @@ sudo apt-get update
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 
+mkdir -p ~/.docker/cli-plugins/
+
+curl -SL https://github.com/docker/compose/releases/download/v2.2.3/docker-compose-linux-$(uname -m) -o ~/.docker/cli-plugins/docker-compose
+
+chmod +x ~/.docker/cli-plugins/docker-compose
+
 echo "(tput setaf 2)Installation is complete, please run the config.sh file!$(tput sgr 0)"
