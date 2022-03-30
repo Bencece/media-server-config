@@ -20,6 +20,5 @@ services:
             - 80:8096
             - 443:8096
         volumes:
-            - /home/${USER}/jellyfin/config:/config
-            - /home/${USER}/jellyfin/cache:/cache
+            - /config/apache.conf:/usr/local/apache2/conf/httpd.conf
         restart: "unless-stopped"
