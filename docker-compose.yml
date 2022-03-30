@@ -12,3 +12,14 @@ services:
             - /home/${USER}/jellyfin/config:/config
             - /home/${USER}/jellyfin/cache:/cache
         restart: "unless-stopped"
+    httpd:
+        image: httpd
+        container_name: httpd
+        network_mode: "host"
+        ports:
+            - 80:8096
+            - 443:8096
+        volumes:
+            - /home/${USER}/jellyfin/config:/config
+            - /home/${USER}/jellyfin/cache:/cache
+        restart: "unless-stopped"
